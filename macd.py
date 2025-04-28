@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 import yfinance as yf
@@ -25,6 +26,11 @@ def macd(
 
 
 if __name__ == "__main__":
+    if not os.path.exists("results"):
+        os.makedirs("results")
+        
+    if not os.path.exists("results/macd"):
+        os.makedirs("results/macd")
     data = yf.download("AAPL", start="2020-01-01", end="2024-01-01")
     data.columns = data.columns.levels[0]
     start_test = datetime(2023, 1, 1)

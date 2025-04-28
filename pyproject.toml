@@ -13,6 +13,7 @@ pandas-datareader = "^0.10.0"
 matplotlib = "^3.10.1"
 tqdm = "^4.67.1"
 hyperopt = "^0.2.7"
+yfinance = "^0.2.56"
 
 
 [build-system]
